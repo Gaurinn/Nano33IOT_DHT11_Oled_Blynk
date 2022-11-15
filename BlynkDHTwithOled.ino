@@ -1,3 +1,10 @@
+// Arduino Nano 33 iot project with a DHT11 temperature and humidity sensor that displays
+// temperature and humidity values on an Oled screen and sends the data to the Blynk cloud
+
+// Author: Andri Sæmundsson
+// Date: 2022-15-11
+// Version: 1.0.0
+
 // Template ID, Device Name and Auth Token are provided by the Blynk.Cloud
 #define BLYNK_TEMPLATE_ID "XXXXXXXXXXXXX"
 #define BLYNK_DEVICE_NAME "Temperature and Humidity Sensor"
