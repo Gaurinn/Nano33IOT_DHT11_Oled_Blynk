@@ -125,6 +125,8 @@ void oledDisplay(){
   // Read temperature and humidity and put in variables t1 and h1
   float t1 = dht.readTemperature();
   float h1 = dht.readHumidity();
+
+  // Making sure DHT sensor is reading correctly
   if (isnan(h1) || isnan(t1)) {
     Serial.println("Failed to read from DHT sensor!");
   }
@@ -158,7 +160,7 @@ void oledDisplay(){
   display.clearDisplay();  
 }
 
-// This function sends Arduino's uptime every 2 seconds to Virtual Pin 4 and 5.
+// Send sensor data to Blynk every 2 seconds to Virtual Pin 4 and 5.
 void sendSensor(){
   
   // Getting temperature and humidity variables from DHT sensor
@@ -178,7 +180,7 @@ void sendSensor(){
   Blynk.virtualWrite(V5, h);
 }
 
-// Setup DHT sensor, oled screen, timer functions and connection to WIF and Blynk
+// Setup DHT sensor, oled screen, timer functions and connection to WIFI and Blynk
 void setup(){  
   
   // Serial monitor for debugging
